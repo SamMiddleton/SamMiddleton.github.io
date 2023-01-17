@@ -1,0 +1,32 @@
+.demo * {
+  background-color: #23BE6E;
+  border-radius: 5px;
+  border: 2px;
+  border-color: #229665;
+  margin: 5px;
+  padding: 3px;
+  width: fit-content;
+}
+
+#absolute {
+  position: absolute;
+  top: 150px;
+  right: 50px;
+}
+
+#fixed {
+  position: fixed;
+  top: 50px;
+  right: 10px;
+}
+
+#relative {
+  position: relative;
+  left: 20px;
+  top: 3px;
+}
+
+#sticky {
+  position: sticky;
+  top: 0;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<title>HTML Quine</title>
+</head>
+<body>
+
+<h1>An HTML Quine</h1>
+
+<p>This is <em>rendered HTML</em>, but resembles its own source code.</p>
+
+<p>I knew this was possible when I made this, but I had forgotten the details.</p>
+
+<p>I managed to get most of the basics, but needed to look up how to do attributes and <code>white-space</code>.</p>
+
+<p>Back to <a href='../index.html'>Home</a></p>
+
+<h2>How it works</h2>
+
+<p>The following is an <strong>actual stylesheet</strong> in the body of this page:</p>
+
+<style>
+  * {display: block; font-family:Monospace}
+  a, code, em, strong {display: inline;}
+  html[lang]::before {
+    content: "<!DOCTYPE html>\a<html lang='" attr(lang) "'>";
+    white-space: pre;
+  }
+  html {
+    max-width:70ch;
+    padding:2ch;
+    margin:auto;
+    color:#333;
+    font-size:1.2em;
+  }
+  html::after {content: "</html>";}
+  head::before {content: "<head>";}
+  head::after {content: "</head>";}
+  meta[charset]::before {
+    content: "<meta charset='" attr(charset) "'>";
+  }
+  meta[name]::before {
+    content: "<meta name='" attr(name)
+  }
+  meta[content]::after {
+    content: "' content='" attr(content) "'>"
+  }
+  title::before {content: "<title>";}
+  title::after {content: "</title>";}
+  body::before {content: "<body>";}
+  body {margin: 0;}
+  body::after {content: "</body>";}
+  h1::before {content: "<h1>";}
+  h1::after {content: "</h1>";}
+  h2::before {content: "<h2>";}
+  h2::after {content: "</h2>";}
+  p::before {content: "<p>";}
+  p::after {content: "</p>";}
+  code::before {content: "<code>";}
+  code::after {content: "</code>";}
+  em::before {content: "<em>";}
+  em::after {content: "</em>";}
+  a[href]::before {content: "<a href='" attr(href) "'>";}
+  a {text-decoration: none;}
+  a:hover {text-decoration: underline;}
+  a::after {content: "</a>";}
+  strong::before {content: "<strong>";}
+  strong::after {content: "</strong>";}
+  style::before {content: "<style>";}
+  style::after {content: "<\/style>";}
+  style{white-space: pre-wrap;}
+  *::before,*::after {
+    color:rgba(136, 18, 128, 0.5);
+    font-weight:100;
+    font-size:1.0em
+  }
+</style>
+
+<p>If you don't believe me, inspect the page and delete it.</p>
+
+</body>
+</html>

@@ -1,0 +1,127 @@
+body {
+  background-color: #1FDAFF;
+}
+
+body#index {
+  background-image: url('../media/cristian-palmer-XexawgzYOBc-unsplash.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-color: #002431;
+}
+
+nav {
+  background-color: #003C52;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+}
+
+nav span {
+  color: #229665;
+}
+
+nav span:hover {
+  color: #23BE6E;
+}
+
+header {
+  padding: 10px;
+}
+
+header p {
+  font-size: 1.2em;
+}
+
+h1 {
+  color: #23BE6E;
+}
+
+main {
+  margin-bottom: 40px;
+}
+
+section {
+  margin-top: 55px;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-family: 'Sofia Sans', sans-serif;
+}
+
+article {
+  border-radius: 10px;
+  margin: 5px;
+  padding: 10px;
+}
+
+article h3 {
+  color: #002431;
+  margin: 0;
+}
+
+article h6 {
+  color: paleturquoise;
+  font-weight: 100;
+  margin: 5px 0;
+}
+
+article p {
+  color: #002431;
+  margin: 0;
+}
+
+article.core {
+  background-color: #229665;
+}
+
+article.tech {
+  background-color: #23BE6E;
+}
+
+footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #000F14;
+}
+
+footer p {
+  color: #AdF1FF;
+  font-size: 0.5em;
+  margin-left: 10px;
+}
+
+footer a {
+  color: grey;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  article {
+    display: inline-block;
+    width: 45%;
+  }
+
+  section {
+    max-width: 768px;
+    margin: auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  
+  article {
+    width: 30%;
+  }
+}

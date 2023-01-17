@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../styles/main.css" rel="stylesheet" type="text/css">
+    <link href="../styles/position.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <title>CSS Position</title>
+  </head>
+  <body>
+    <nav><a href="../index.html"><span class="material-symbols-outlined"> home </span></a></nav>
+    <section>
+      <h1>CSS Positioning Modes</h1>
+      <p>The CSS <code>position</code> property has seven possible values:</p>
+      <ol class="demo">
+        <li id="static">static</li>
+        <li id="fixed">fixed</li>
+        <li id="relative">relative</li>
+        <li id="sticky">sticky</li>
+        <li id="absolute">absolute</li>
+        <li id="initial">initial</li>
+        <li id="inherit">inherit</li>
+      </ol>
+
+      <p>The default value is <code>static</code>, meaning that the element's position is determined by where it appears in the HTML.</p>
+      <p>Using <code>fixed</code> makes an element stay in the same place in the window, even when you scroll.
+      The <code>top</code>, <code>bottom</code>, <code>left</code> & <code>right</code> properties are used to determine how far away from each edge the element is placed.
+      The element does not leave a gap where it would normally be in <code>fixed</code> mode.</p>
+      <p>Using <code>absolute</code> position makes <code>top</code>, <code>bottom</code>, <code>left</code> & <code>right</code> 
+      position the element relative to the bounding box of the closest ancestor with a non-<code>static</code> position, or otherwise the body of the page (as is the case withthe list above).
+      The element will scroll with the page (unless inside something that doesn't) and won't leave a gap where it would normally be.</p>
+      <p>Using <code>relative</code> allows you to nudge an element around.
+      In this mode, setting <code>left: 20px;</code> will insert 20 pixels of space to the left of the element.
+      Other elements will be positioned as if this element occupied its default position.</p>
+      <p>An element with <code>sticky</code> position behaves as if it was <code>relative</code> unless it 
+      scrolls to the edge of the window, where it will behave as if it was <code>fixed</code>.</p>
+      <p>Using <code>initial</code> sets any property to its default value, in this case <code>static</code> static.
+      Similarly, <code>inherit</code> sets any property to the value the parent has, also <code>static</code> in this case.
+      These values were mainly included in the list to show how <code>relative</code> & <code>sticky</code> leave space.</p>
+    </section>
+  </body>
+</html>
