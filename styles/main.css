@@ -55,6 +55,12 @@ p {
   font-family: 'Sofia Sans', sans-serif;
 }
 
+.note {
+  font-size: 0.8em;
+  font-style: italic;
+  color: grey;
+}
+
 article {
   border-radius: 10px;
   margin: 5px;

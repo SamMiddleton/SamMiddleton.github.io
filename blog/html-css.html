@@ -12,6 +12,7 @@
     <nav><a href="../index.html"><span class="material-symbols-outlined"> home </span></a></nav>
     <section>
       <h1>CSS Positioning Modes</h1>
+      <p class="note">If you don't have a scrollbar, you should resixe this window until you do.</p>
       <p>The CSS <code>position</code> property has seven possible values:</p>
       <ol class="demo">
         <li id="static">static</li>
@@ -34,10 +35,17 @@
       In this mode, setting <code>left: 20px;</code> will insert 20 pixels of space to the left of the element.
       Other elements will be positioned as if this element occupied its default position.</p>
       <p>An element with <code>sticky</code> position behaves as if it was <code>relative</code> unless it 
-      scrolls to the edge of the window, where it will behave as if it was <code>fixed</code>.</p>
+      scrolls to the edge of the window, where it will behave as if it was <code>fixed</code>.
+      To make <code>sticky</code> work in Safari, you need to use <code>-webkit-sticky</code> instead.</p>
       <p>Using <code>initial</code> sets any property to its default value, in this case <code>static</code> static.
       Similarly, <code>inherit</code> sets any property to the value the parent has, also <code>static</code> in this case.
       These values were mainly included in the list to show how <code>relative</code> & <code>sticky</code> leave space.</p>
+      <h2 class="teaser">V Another Example V</h2>
+      <div class="canvas">
+        <p>This div has relative position.</p>
+        <div class="stick"><p>This div has sticky position</p></div>
+        <div class="abs"><p>This div has absolute position</p></div>
+      </div>
     </section>
   </body>
 </html>

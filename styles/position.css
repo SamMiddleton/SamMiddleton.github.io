@@ -1,8 +1,7 @@
 .demo * {
   background-color: #23BE6E;
   border-radius: 5px;
-  border: 2px;
-  border-color: #229665;
+  border: 2px solid #229665;
   margin: 5px;
   padding: 3px;
   width: fit-content;
@@ -29,4 +28,54 @@
 #sticky {
   position: sticky;
   top: 0;
+}
+
+#static {
+  position: static;
+}
+
+#initial {
+  position: initial;
+}
+
+#inherit {
+  position: inherit;
+}
+
+.teaser {
+  position: sticky;
+  bottom: 0;
+  background-color: #229665;
+  color: #005A7A;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.canvas {
+  position: relative;
+  width: 300px;
+  height: 250px;
+}
+
+.canvas, .canvas div {
+  border: 2px solid #229665;
+  border-radius: 5px;
+  background-color: aliceblue;
+}
+
+.stick {
+  position: sticky;
+  top: 0;
+  bottom: 0;
+  margin-left: 10px;
+  width: 100px;
+  height: 75px;
+}
+
+.abs {
+  position: absolute;
+  right: 25px;
+  bottom: 25px;
+  width: 100px;
+  height: 75px;
 }
