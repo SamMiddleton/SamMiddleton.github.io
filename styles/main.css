@@ -40,10 +40,6 @@ h1 {
 }
 
 main {
-  margin-bottom: 40px;
-}
-
-section {
   margin-top: 55px;
 }
 
@@ -61,33 +57,45 @@ p {
   color: grey;
 }
 
-article {
+section {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 40px;
+}
+
+section > * {
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+section a {
   border-radius: 10px;
-  margin: 5px;
   padding: 10px;
 }
 
-article h3 {
+a h3 {
   color: #002431;
   margin: 0;
 }
 
-article h6 {
+a h6 {
   color: paleturquoise;
   font-weight: 100;
   margin: 5px 0;
 }
 
-article p {
+a p {
   color: #002431;
   margin: 0;
 }
 
-article.core {
+a.core {
   background-color: #229665;
 }
 
-article.tech {
+a.tech {
   background-color: #23BE6E;
 }
 
@@ -97,12 +105,15 @@ footer {
   bottom: 0;
   left: 0;
   background-color: #000F14;
+  display: flex;
+  justify-content: end;
 }
 
 footer p {
   color: #AdF1FF;
   font-size: 0.5em;
-  margin-left: 10px;
+  margin: 10px;
+  text-align: right;
 }
 
 footer a {
@@ -114,20 +125,19 @@ footer a:hover {
 }
 
 @media (min-width: 768px) {
-  article {
-    display: inline-block;
-    width: 45%;
-  }
-
-  section {
+  main {
     max-width: 768px;
     margin: 55px auto 0;
   }
 }
 
-@media (min-width: 1200px) {
-  
-  article {
-    width: 30%;
+
+@media (min-width: 600px) {
+  section {
+    flex-direction: row;
+  }
+
+  section > * {
+    flex-basis: 300px;
   }
 }
