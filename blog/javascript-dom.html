@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../styles/main.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <title>Intro to JavaScript</title>
+  </head>
+  <body>
+    <nav><a href="../index.html"><span class="material-symbols-outlined"> home </span></a></nav>
+    <main>
+      <h1>Intro to Javascript</h1>
+      <h3>What is JavaScript?</h3>
+      <p>If a website was a robot arm, HTML would be the trusses that make up its structure, 
+        CSS would be panelling that makes it look nice and JavaScript would be the motors that make it move.</p>
+      <p>Javascript provides interactivity to websites, where HTML provides the content and structure and CSS provides the styling.</p>
+      <h3>Control Flow and Loops</h3>
+      <p>To do complex interactivity, it is often necessary to do things only sometimes,
+         for example <code>IF the laundry basket is full THEN put a wash on</code>.</p>
+      <p>It is also useful to choose between options, e.g. 
+        <code>IF more than half the dirty laundry is white THEN put a white wash on ELSE put a coloured wash on</code></p>
+      <p>You can also do things several times with loops, such as <code>FOR EACH piece of clothing IN the clean laundry DO fold it</code></p>
+      <p>Another form of loop is the while loop, which could look like this:
+        <code>WHILE the bedsheet is more than 50cm on any side DO fold it in half</code>
+      </p>
+      <h3>The <em>Document Object Model</em></h3>
+      <p>The Document Object Model, or DOM is a representation of the webpage's structure in a form that can be understood and manipulated by JavaScript code.</p>
+      <p>The following code, for example, finds the element with the ID of <code>foo</code> and sets the function <code>bar</code> to be called whenever the element is clicked (functions are explained below).</p>
+      <blockquote><pre><code>el = document.querySelector('#foo')
+el.addEventListener('click', bar)</code></pre></blockquote>
+      <h3>Arrays and Objects</h3>
+      <p>There are two basic ways to store a collection of things in JavaScript: Arrays and Objects.</p>
+      <p>An array is a list of values, e.g. <code>arr = ['foo', 'bar', 'baz']</code>.</p>
+      <p>Elements of an array can be retrieved and modified by <em>indexing</em>, counting the elements from 0 so <code>a = arr[1]</code> assigns <code>'bar'</code> to <code>a</code> and <code>arr[2] = 'foobar'</code> sets the last element of the array to <code>'foobar'</code>.</p>
+      <p>Objects store information in key-value pairs like so: <code>obj = {a:1, b:1, c:2, d:3, e:5}</code> and are accessed like <code>foo = obj.d</code>.</p>
+      <h3>Functions</h3>
+      <p>A function is a self contained block of code that can be reused, e.g.</p>
+      <blockquote><pre><code>function collatz(num) {
+  let result
+  if (num % 2 === 0) {
+    result = num / 2
+  } else {
+    result = 3*num + 1
+  }
+  return result
+}</code></pre></blockquote>
+      <p>If we then call the function like <code>a = collatz(10)</code>, then <code>num</code> is assigned the value <code>10</code> and the function's code is executed.</p>
+      <p>As 10 has a remainder of 0 when divided by 2, the first branch of the <code>if-else</code> is executed and <code>result</code> is assigned the value <code>5</code>.</p>
+      <p>We then <code>return result</code> so the function exits and <code>5</code> gets assigned to <code>a</code>.</p>
+      <p>Functions are useful because they save us from having to write out the same code again and again, and they can abstract away implementation details from higher-order logic.</p>
+    </main>
+  </body>
+</html>
