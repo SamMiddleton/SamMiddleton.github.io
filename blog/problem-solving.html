@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../styles/main.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
+  <title>Problem Solving</title>
+</head>
+<body>
+  <nav><a href="../index.html"><span class="material-symbols-outlined"> home </span></a></nav>
+  <main>
+    <h1>Problem Solving</h1>
+    <h2>Getting Blocked</h2>
+
+    <p>
+      I once had to convert some code that I had written with <a href="https://numpy.org/">NumPy</a> to use <a href="https://pytorch.org/">PyTorch</a>.
+      It involved finding the maximum value of an array, and I suddenly got garbage output.
+    </p>
+
+    <p>
+      Through a combination of debug prints, trying things out with the interpereter and reading the documentation,
+      I learned that NumPy and PyTorch have different naming conventions for the various ways you can interperet "finding the maximum".
+      Overall, I first felt confused, gradually changing to annoyed.
+    </p>
+
+    <h2>An Elegant Solution</h2>
+
+    <p>
+      I've done a bunch of work on making a custom Keypoint Detection neural network in PyTorch based on the provided <a href="https://pytorch.org/vision/stable/models.html#keypoint-detection">KeypointRCNN</a>.
+      This required creating my own <a href="https://pytorch.org/tutorials/beginner/basics/data_tutorial.html">Dataset</a> to load the images and annotations.
+      This took a little bit of reading the documentation to work out what format I needed to present the data in, but it was fairly easy to inferit from <a href="https://pytorch.org/vision/stable/datasets.html">TorchVision's provided datasets</a>.
+      I also created another Dataset that formatted the output differently for an attempt to create a model not based on KeypointRCNN.
+    </p>
+
+    <p>
+      I then wanted to create versions of those Datasets that pulled the images from <a href="https://aws.amazon.com/s3/">s3</a>.
+      This took a bit more reading of documentation to work out how to do, as well as some planning on how I wanted to cache the images so I didn't download them multiple times.
+      I then realised that I was using the same code in both the modified Datasets, and thought I could use multiple inheritance to avoid repeating myself.
+      After <a href="https://rhettinger.wordpress.com/2011/05/26/super-considered-super/ ">a bit more research</a>, I was able to pull it off and felt extremely smug.
+      I learnt that I was capable of using multiple inheritance to keep my code DRY.
+    </p>
+    
+    <h2>Problem Solving Techniques</h2>
+    <h4>And how I feel about them</h4>
+    <ul>
+      <li>
+        <h5>Pseudocode</h5>
+        <p>
+          I can do it, but I feel I'm more likely to do top-down-design and
+          write valid code that relies on functions I haven't implemented yet.
+        </p>
+      </li>
+      <li>
+        <h5>Trying something</h5>
+        <p>
+          I am very comfortable with messing around to figure out how stuff works.
+        </p>
+      </li>
+      <li>
+        <h5>Rubber ducky method</h5>
+        <p>
+          I should try this.
+        </p>
+      </li>
+      <li>
+        <h5>Reading error messages</h5>
+        <p>I am comfortable with trying to interperet error messages, even obtuse ones.</p>
+      </li>
+      <li>
+        <h5>Console.logging</h5>
+        <p>I am very comfortable with doing this.</p>
+      </li>
+      <li>
+        <h5>Googling</h5>
+        <p>I am comfortable doing this.</p>
+      </li>
+      <li>
+        <h5>Asing peers for help</h5>
+        <p>I am ok with this.</p>
+      </li>
+      <li>
+        <h5>Asking coaches for help</h5>
+        <p>I am fine with this.</p>
+      </li>
+      <li>
+        <h5>Improving my process with reflection</h5>
+        <p>I should do this more.</p>
+      </li>
+    </ul>
+  </main>
+</body>
+</html>
